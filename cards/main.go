@@ -41,4 +41,8 @@ func notes() {
 	newDeck.saveToFile("my_cards")
 	readDeck := newDeckFromFile("my_cards")
 	readDeck.print()
+
+	// Testing:
+	// - a test file should end with '_test.go'
+	// - 'go test' runs all tests in a package
 }
