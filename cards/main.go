@@ -7,10 +7,8 @@ import (
 
 func main() {
 	cards := newDeck()
-	cards.saveToFile("my_cards")
-
-	readDeck := newDeckFromFile("my_cards")
-	readDeck.print()
+	cards.shuffle()
+	cards.print()
 }
 
 func newCard() string {
@@ -37,4 +35,10 @@ func notes() {
 	// Convert a slice of strings into a string.
 	convertedString := strings.Join(cards, ",")
 	fmt.Println(convertedString)
+
+	// Using the save and read to/from file
+	newDeck := newDeck()
+	newDeck.saveToFile("my_cards")
+	readDeck := newDeckFromFile("my_cards")
+	readDeck.print()
 }
