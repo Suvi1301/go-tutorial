@@ -8,6 +8,9 @@ import (
 func main() {
 	cards := newDeck()
 	cards.saveToFile("my_cards")
+
+	readDeck := newDeckFromFile("my_cards")
+	readDeck.print()
 }
 
 func newCard() string {
